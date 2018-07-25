@@ -1,0 +1,25 @@
+{
+  "name": "semantic-release-monorepo-playground",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "postinstall": "lerna bootstrap",
+    "semantic-release": "lerna exec --concurrency 1 -- semantic-release --dry-run -e semantic-release-monorepo --tag-format='${LERNA_PACKAGE_NAME}-v\\${version}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markdalgleish/semantic-release-monorepo-playground.git"
+  },
+  "author": "Mark Dalgleish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markdalgleish/semantic-release-monorepo-playground/issues"
+  },
+  "homepage": "https://github.com/markdalgleish/semantic-release-monorepo-playground#readme",
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}
